@@ -6,6 +6,7 @@ const $messageFormInput = $messageForm.querySelector('input')
 const $messageFormButton = $messageForm.querySelector('button')
 const $locationSendButton = document.querySelector('#send-location')
 const $messages = document.querySelector('#messages')
+const $exitButton = document.querySelector('#exit-button')
 
 // Templates
 const messageTemplate = document.querySelector('#message-template').innerHTML
@@ -104,6 +105,10 @@ $locationSendButton.addEventListener('click', () => {
             $locationSendButton.removeAttribute('disabled')
         })
     })
+})
+
+$exitButton.addEventListener('click', () => {
+    location.href = '/'
 })
 
 socket.emit('join', {username, room}, (error) => {

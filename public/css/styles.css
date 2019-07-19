@@ -200,3 +200,7 @@ button:disabled {
     color: white;
     text-decoration: none;
 }
+
+.exit_bt {
+    margin-left: 16px;
+}
